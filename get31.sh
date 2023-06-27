@@ -36,6 +36,7 @@ sed -i -- 's/include <varargs.h>/include <stdarg.h>/g' **/*.c
 
 patch -u -p1 include/obstack.h -i ../obstack31.h.patch
 patch -u -p1 gcc/cp/decl.c -i ../decl31.c.patch
+patch -u -p1 gcc/varasm.c -i ../varasm.c.patch
 
 # -m32 breaks 
 make -C libiberty/ CFLAGS="-std=gnu89 -static"
